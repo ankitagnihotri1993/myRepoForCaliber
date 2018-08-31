@@ -1,0 +1,161 @@
+{
+	"title": "Ankit Caliber",
+	"description": "magicsoftware component for the Caliber",
+	"docsUrl": "",
+	"credentials": {
+		"fields": {
+			"apiKey": {
+				"label": "API Key",
+				"required": true,
+				"viewClass": "TextFieldWithNoteView"
+			},
+			"username": {
+				"label": "User Name",
+				"required": true,
+				"viewClass": "TextFieldWithNoteView"
+			},
+			"password": {
+				"label": "Password",
+				"required": true,
+				"viewClass": "TextFieldWithNoteView"
+			},
+			"endPointURL": {
+				"label": "End Point URL",
+				"required": true,
+        "viewClass": "TextFieldWithNoteView"
+        
+      }
+      
+		}
+	},
+  "triggers": {
+    "getCaliberVendorDetails": {
+      "main": "./lib/triggers/getCaliberVendorDetails.js",
+      "type": "polling",
+      "title": "Get Caliber Vendor Details"
+
+    },
+    "getCaliberGLAccounts": {
+      "main": "./lib/triggers/getCaliberGLAccounts.js",
+      "type": "polling",
+      "title": "Get Caliber GL Accounts"
+    },
+    "getCaliberInvoices": {
+      "main": "./lib/triggers/getCaliberClientInvoice.js",
+      "type": "polling",
+      "title": "Get Caliber Invoices"
+
+    },
+    "getCaliberClients": {
+      "main": "./lib/triggers/getCaliberClients.js",
+      "type": "polling",
+      "title": "Get Caliber Clients"
+    },
+    "getAllVendorWithRelationship": {
+      "main": "./lib/triggers/Vendor.js",
+      "type": "polling",
+      "title": "get All Vendor With Relationship"
+    }
+  },
+  "actions": {
+    "createInovice": {
+      "main": "./lib/actions/createCaliberInvoice.js",
+      "title": "Create Caliber Invoice",
+      "model": "InvoiceDetails",
+      "metadata": {
+        "in": "./lib/schemas/Invoice/createInvoice.in.json",
+        "out": "./lib/schemas/Invoice/createInvoice.out.json"
+      }
+    },
+    "createInovicePayment": {
+      "main": "./lib/actions/createInvoicePayment.js",
+      "title": "Create Invoice Payment",
+      "metadata": {
+        "in": "./lib/schemas/Payment/createInvoicePayment.in.json",
+        "out": "./lib/schemas/Payment/createInvoicePayment.out.json"
+      }
+    },
+    "updateVendor": {
+      "main": "./lib/actions/updateVendor.js",
+      "title": "Update Vendor",
+      "metadata": {
+        "in": "./lib/schemas/Vendor/updateVendor.in.json",
+        "out": "./lib/schemas/Vendor/updateVendor.out.json"
+      }
+    },
+    "getVendorByClientId": {
+      "main": "./lib/actions/getVendorByClientId.js",
+      "title": "Get Vendor by client id",
+      "metadata": {
+        "in": "./lib/schemas/Vendor/getVendorByClient.in.json",
+        "out": {}
+      }
+    },
+    "getGLAccounts": {
+      "main": "./lib/actions/getCaliberGLAccounts.js",
+      "title": "Get GL Accounts",
+      "metadata": {
+        "in": "./lib/schemas/GLAccount/getGLAccount.in.json",
+        "out": {}
+      }
+    },
+    "getCostCenters": {
+      "main": "./lib/actions/getCaliberCostCenters.js",
+      "title": "Get Cost Centers",
+      "metadata": {
+        "in": "./lib/schemas/CostCenters/getCostCenters.in.json",
+        "out": {}
+      }
+    },
+    "getInvoiceByClientId": {
+      "main": "./lib/actions/getInvoiceByClientId.js",
+      "title": "Get Invoice By Client",
+      "metadata": {
+        "in": "./lib/schemas/Invoice/getInvoiceByClientId.in.json",
+        "out": {}
+      }
+    },
+    "getInvoiceByVendorId": {
+      "main": "./lib/actions/getInvoiceByVendor.js",
+      "title": "Get Invoice By Vendor",
+      "metadata": {
+        "in": "./lib/schemas/Invoice/getInvoiceByVendorId.in.json",
+        "out": {}
+      }
+    },
+    "getPaidInvoiceByVendorId": {
+      "main": "./lib/actions/getPaidInvoiceByVendor.js",
+      "title": "Get Paid Invoice By Vendor",
+      "metadata": {
+        "in": "./lib/schemas/Invoice/getInvoiceByVendorId.in.json",
+        "out": {}
+      }
+    },
+    "getPaymentByInvoiceId": {
+      "main": "./lib/actions/getPaymentByInvoiceId.js",
+      "title": "Get Payment By Invoice",
+      "metadata": {
+        "in": "./lib/schemas/Payment/getPaymentByInvoiceId.in.json",
+        "out": {}
+      }
+    },
+    "getInvoiceLineItems": {
+      "main": "./lib/actions/getInvoiceLineItems.js",
+      "title": "Get Invoice Line Items",
+      "metadata": {
+        "in": "./lib/schemas/Invoice/getInvoiceLineItems.in.json",
+        "out": {}
+      }
+    },
+    "getClientByClientId": {
+      "main": "./lib/actions/getClientByClientId.js",
+      "title": "Get Client By Client Id",
+      "metadata": {
+        "in": "./lib/schemas/Client/getClientByClientId.in.json",
+        "out": {}
+      }
+    }
+  }
+  
+}
+

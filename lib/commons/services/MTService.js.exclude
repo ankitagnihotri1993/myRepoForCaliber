@@ -1,0 +1,114 @@
+const request = require('request-promise');
+const createVendorURL = "/mtapi/base/services/vendor/{companyId}";
+const createSubsidiaryURL = "/mtapi/base/services/subsidiary/{companyId}";
+const createClassificationURL = '/mtapi/base/services/classification/{companyId}';
+const createGLAccountURL = '/mtapi/base/services/glaccount/{companyId}';
+const createTermsURL= '/mtapi/base/services/term/{companyId}';
+const util = require("../utility.js");
+
+var cfg=
+{
+    username:'hannah.kim+tf+api@mineraltree.com',
+    password:'testRun#1', 
+    endPointURL:'https://test-f-mt.mineraltree.net/',
+    companyId:'2f436ea7-427d-4a12-9af5-73c8975c545d',
+    etag:'7d3e89d0a83d7c15387e16c00210e8011ad35ee2627147ddc7aa462a3a26d0b38e026bb2d80fbf3c01511861bbb8c72dec43eebe9684d0e5e9ce1daa34e4c425'
+};
+
+module.exports = {
+    createVendor: async function (bodyData) {
+        var apiCredentials = cfg.username + ":" + cfg.password;
+        var fullUrl = cfg.endPointURL + createVendorURL.replace('{companyId}', cfg.companyId);
+      console.log("fullUrl "+fullUrl);
+      const requestOptions = {
+            uri: `${fullUrl}`,
+            headers: {
+                'If-Match': cfg.etag,
+                'Content-Type': 'application/json'
+            },
+            body: bodyData,
+            json: true
+        };
+        return await request.post(requestOptions).then(util.autoParse).catch(util.error);
+    },
+    createSubsidiary: async function (bodyData) {
+         var apiCredentials = cfg.username + ":" + cfg.password;
+         var fullUrl = cfg.endPointURL + createSubsidiaryURL.replace('{companyId}', cfg.companyId);
+        //  console.log("fullUrl "+fullUrl);
+        //  console.log("bodyData "+ JSON.stringify(bodyData));
+         const requestOptions = {
+            uri: `${fullUrl}`,
+              headers: {
+                'If-Match': cfg.etag,
+                'Content-Type': 'application/json'
+            },
+            body: bodyData,
+            json: true
+        };
+        return await request.post(requestOptions).then(util.autoParse).catch(util.error);
+    },
+    createClassification: async function (bodyData) {
+
+
+        var apiCredentials = cfg.username + ":" + cfg.password;
+        var fullUrl = cfg.endPointURL + createClassificationURL.replace('{companyId}', cfg.companyId);
+
+console.log("Cost Center URL "+ fullUrl);
+console.log("Cost Center Body "+ JSON.stringify(bodyData));
+
+        const requestOptions = {
+            uri: `${fullUrl}`,
+            headers: {
+                'If-Match': cfg.etag,
+                'Content-Type': 'application/json'
+            },
+            body: bodyData,
+            json: true
+        };
+        return await request.post(requestOptions).then(util.autoParse).catch(util.error);
+    },
+    createGLAccount: async function (bodyData) {
+        var apiCredentials = cfg.username + ":" + cfg.password;
+        var fullUrl = cfg.endPointURL + createGLAccountURL.replace('{companyId}', cfg.companyId);    
+        const requestOptions = {
+            uri: `${fullUrl}`,
+            headers: {
+                'If-Match': cfg.etag,
+                'Content-Type': 'application/json'
+            },
+            body: bodyData,
+            json: true
+        };
+        return await request.post(requestOptions).then(util.autoParse).catch(util.error);
+    },
+    createTerms: async function (bodyData) {
+
+        console.log("Body Data "+JSON.stringify(bodyData));
+
+        var apiCredentials = cfg.username + ":" + cfg.password;
+        var fullUrl = cfg.endPointURL + createTermsURL.replace('{companyId}', cfg.companyId);    
+        const requestOptions = {
+            uri: `${fullUrl}`,
+            headers: {
+                'If-Match': cfg.etag,
+                'Content-Type': 'application/json'
+            },
+            body: bodyData,
+            json: true
+        };
+        return await request.post(requestOptions).then(util.autoParse).catch(util.error);
+    },
+    login: async function () {
+        var apiCredentials = cfg.username + ":" + cfg.password;
+        const requestOptions = {
+            uri: cfg.endPointURL + '/mtapi/base/security/login',
+            headers: {
+                'Authorization': "MT " + apiCredentials
+            },
+            json: true,
+            resolveWithFullResponse: true
+        };
+        return await request.post(requestOptions).then(util.autoParse).catch(util.error);
+    }
+    
+};

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "definitions": {},
+    "properties": {
+    "vendorId": {
+      "type": "integer",
+      "title": "Vendor Id",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,718 @@
+{
+  "type": "object",
+  "definitions": {},
+    "properties": {
+    "InvoiceID": {
+      "type": "integer",
+      "title": "Invoiceid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "ClientID": {
+      "type": "integer",
+      "title": "Clientid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "InvoiceNumber": {
+      "type": "string",
+      "title": "Invoicenumber",
+      "default": "",
+      "examples": [
+        "sample string 2"
+      ]
+    },
+    "APBasis": {
+      "type": "integer",
+      "title": "Apbasis",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "ActualNumberOfApprovals": {
+      "type": "integer",
+      "title": "Actualnumberofapprovals",
+      "default": 0,
+      "examples": [
+        3
+      ]
+    },
+    "Amount": {
+      "type": "integer",
+      "title": "Amount",
+      "default": 0,
+      "examples": [
+        3
+      ]
+    },
+    "PONumber": {
+      "type": "string",
+      "title": "Ponumber",
+      "default": "",
+      "examples": [
+        "sample string 5"
+      ]
+    },
+    "AcctTermID": {
+      "type": "integer",
+      "title": "Accttermid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "AcctTerm": {
+      "type": "string",
+      "title": "Acctterm",
+      "default": "",
+      "examples": [
+        "sample string 6"
+      ]
+    },
+    "PaymentTypeID": {
+      "type": "integer",
+      "title": "Paymenttypeid",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "ManualCheckNumber": {
+      "type": "integer",
+      "title": "Manualchecknumber",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "ManualPaymentDate": {
+      "type": "string",
+      "title": "Manualpaymentdate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5253057-07:00"
+      ]
+    },
+    "CombinePayments": {
+      "type": "boolean",
+      "title": "Combinepayments",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "PaymentGLAccountID": {
+      "type": "integer",
+      "title": "Paymentglaccountid",
+      "default": 0,
+      "examples": [
+        7
+      ]
+    },
+    "VendorNotes": {
+      "type": "string",
+      "title": "Vendornotes",
+      "default": "",
+      "examples": [
+        "sample string 8"
+      ]
+    },
+    "InvoiceDate": {
+      "type": "string",
+      "title": "Invoicedate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5263067-07:00"
+      ]
+    },
+    "DueDate": {
+      "type": "string",
+      "title": "Duedate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5263067-07:00"
+      ]
+    },
+    "Received": {
+      "type": "boolean",
+      "title": "Received",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "ReceivedDate": {
+      "type": "string",
+      "title": "Receiveddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5263067-07:00"
+      ]
+    },
+    "Validated": {
+      "type": "boolean",
+      "title": "Validated",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "ValidatedDate": {
+      "type": "string",
+      "title": "Validateddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5263067-07:00"
+      ]
+    },
+    "OnHold": {
+      "type": "boolean",
+      "title": "Onhold",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "OnHoldDate": {
+      "type": "string",
+      "title": "Onholddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5263067-07:00"
+      ]
+    },
+    "APApproved": {
+      "type": "boolean",
+      "title": "Apapproved",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "APApprovedDate": {
+      "type": "string",
+      "title": "Apapproveddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5273077-07:00"
+      ]
+    },
+    "MgrApproved": {
+      "type": "boolean",
+      "title": "Mgrapproved",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "MgrApprovedDate": {
+      "type": "string",
+      "title": "Mgrapproveddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5273077-07:00"
+      ]
+    },
+    "BoardApproved": {
+      "type": "boolean",
+      "title": "Boardapproved",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "BoardApprovedDate": {
+      "type": "string",
+      "title": "Boardapproveddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5273077-07:00"
+      ]
+    },
+    "ReadyToPay": {
+      "type": "boolean",
+      "title": "Readytopay",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "ReadyToPayDate": {
+      "type": "string",
+      "title": "Readytopaydate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5273077-07:00"
+      ]
+    },
+    "Rejected": {
+      "type": "boolean",
+      "title": "Rejected",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "RejectedDate": {
+      "type": "string",
+      "title": "Rejecteddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5273077-07:00"
+      ]
+    },
+    "RejectedBy": {
+      "type": "integer",
+      "title": "Rejectedby",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "RejectedByName": {
+      "type": "string",
+      "title": "Rejectedbyname",
+      "default": "",
+      "examples": [
+        "sample string 10"
+      ]
+    },
+    "RejectedReason": {
+      "type": "string",
+      "title": "Rejectedreason",
+      "default": "",
+      "examples": [
+        "sample string 11"
+      ]
+    },
+    "APPosted": {
+      "type": "boolean",
+      "title": "Apposted",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "PostingDate": {
+      "type": "string",
+      "title": "Postingdate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5283086-07:00"
+      ]
+    },
+    "Voided": {
+      "type": "boolean",
+      "title": "Voided",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "VoidDate": {
+      "type": "string",
+      "title": "Voiddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5283086-07:00"
+      ]
+    },
+    "VoidGLTransactionID": {
+      "type": "integer",
+      "title": "Voidgltransactionid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "ChangeInvoiceID": {
+      "type": "integer",
+      "title": "Changeinvoiceid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "Refund": {
+      "type": "boolean",
+      "title": "Refund",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "Recurring": {
+      "type": "boolean",
+      "title": "Recurring",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "UsePrevAmounts": {
+      "type": "boolean",
+      "title": "Useprevamounts",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "RecInvCategoryID": {
+      "type": "integer",
+      "title": "Recinvcategoryid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "SchFrequency": {
+      "type": "integer",
+      "title": "Schfrequency",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "SchStartDate": {
+      "type": "string",
+      "title": "Schstartdate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5293096-07:00"
+      ]
+    },
+    "SchEndDate": {
+      "type": "string",
+      "title": "Schenddate",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5293096-07:00"
+      ]
+    },
+    "RecurringDescription": {
+      "type": "string",
+      "title": "Recurringdescription",
+      "default": "",
+      "examples": [
+        "sample string 12"
+      ]
+    },
+    "PaymentCCID": {
+      "type": "integer",
+      "title": "Paymentccid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "InvoiceStatus": {
+      "type": "integer",
+      "title": "Invoicestatus",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "AmountPaid": {
+      "type": "integer",
+      "title": "Amountpaid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "RemainingBalance": {
+      "type": "integer",
+      "title": "Remainingbalance",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "RequiredNumberOfApprovers": {
+      "type": "integer",
+      "title": "Requirednumberofapprovers",
+      "default": 0,
+      "examples": [
+        13
+      ]
+    },
+    "IsDeleted": {
+      "type": "boolean",
+      "title": "Isdeleted",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "DateCreated": {
+      "type": "string",
+      "title": "Datecreated",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5303106-07:00"
+      ]
+    },
+    "LastModified": {
+      "type": "string",
+      "title": "Lastmodified",
+      "default": "",
+      "examples": [
+        "2018-06-08T03:49:55.5303106-07:00"
+      ]
+    },
+    "APAccountID": {
+      "type": "integer",
+      "title": "Apaccountid",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "PayeeID": {
+      "type": "integer",
+      "title": "Payeeid",
+      "default": 0,
+      "examples": [
+        14
+      ]
+    },
+    "PayeeType": {
+      "type": "integer",
+      "title": "Payeetype",
+      "default": 0,
+      "examples": [
+        10
+      ]
+    },
+    "PayeeName": {
+      "type": "string",
+      "title": "Payeename",
+      "default": "",
+      "examples": [
+        "sample string 15"
+      ]
+    },
+    "Note": {
+      "type": "string",
+      "title": "Note",
+      "default": "",
+      "examples": [
+        "sample string 16"
+      ]
+    },
+    "LineItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "LineItemID": {
+            "type": "integer",
+            "title": "Lineitemid",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "InvoiceID": {
+            "type": "integer",
+            "title": "Invoiceid",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "VendorCode": {
+            "type": "integer",
+            "title": "Vendorcode",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "CostCenterID": {
+            "type": "integer",
+            "title": "Costcenterid",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "ExpenseGLAccountID": {
+            "type": "integer",
+            "title": "Expenseglaccountid",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "Amount": {
+            "type": "integer",
+            "title": "Amount",
+            "default": 0,
+            "examples": [
+              2
+            ]
+          },
+          "Description": {
+            "type": "string",
+            "title": "Description",
+            "default": "",
+            "examples": [
+              "sample string 3"
+            ]
+          },
+          "Quantity": {
+            "type": "integer",
+            "title": "Quantity",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "UnitOfMeasure": {
+            "type": "string",
+            "title": "Unitofmeasure",
+            "default": "",
+            "examples": [
+              "sample string 4"
+            ]
+          },
+          "UnitPrice": {
+            "type": "integer",
+            "title": "Unitprice",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "Is1099Item": {
+            "type": "boolean",
+            "title": "Is1099item",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "Adjustment": {
+            "type": "integer",
+            "title": "Adjustment",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "PostingDate": {
+            "type": "string",
+            "title": "Postingdate",
+            "default": "",
+            "examples": [
+              "2018-06-08T03:49:55.5353154-07:00"
+            ]
+          },
+          "GLTransactionID": {
+            "type": "integer",
+            "title": "Gltransactionid",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "WorkOrderNumber": {
+            "type": "string",
+            "title": "Workordernumber",
+            "default": "",
+            "examples": [
+              "sample string 6"
+            ]
+          },
+          "VendorCredit": {
+            "type": "boolean",
+            "title": "Vendorcredit",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "RecNextAmount": {
+            "type": "integer",
+            "title": "Recnextamount",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "ManualVendorCredit": {
+            "type": "boolean",
+            "title": "Manualvendorcredit",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "LongDescription": {
+            "type": "string",
+            "title": "Longdescription",
+            "default": "",
+            "examples": [
+              "sample string 7"
+            ]
+          },
+          "AmountApplied": {
+            "type": "integer",
+            "title": "Amountapplied",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "PaymentAmount": {
+            "type": "integer",
+            "title": "Paymentamount",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "RemainingBalance": {
+            "type": "integer",
+            "title": "Remainingbalance",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "Links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string",
+            "title": "Rel",
+            "default": "",
+            "examples": [
+              "sample string 1"
+            ]
+          },
+          "href": {
+            "type": "string",
+            "title": "Href",
+            "default": "",
+            "examples": [
+              "sample string 2"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

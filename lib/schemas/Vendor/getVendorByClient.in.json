@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "definitions": {},
+    "properties": {
+    "clientId": {
+      "type": "integer",
+      "title": "Client Id",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,1951 @@
+{
+  "definitions": {}, 
+  "type": "object", 
+  "title": "The Root", 
+  "required": [
+    "PaymentID", 
+    "ClientID", 
+    "ClientName", 
+    "PaymentGLAccountID", 
+    "PaymentGLAccount", 
+    "PayeeName", 
+    "PayeeType", 
+    "PayeeTypeString", 
+    "PayeeID", 
+    "CheckNumberSeries", 
+    "CheckNumber", 
+    "Amount", 
+    "PaymentDate", 
+    "Memo", 
+    "PayerAddress", 
+    "RemitAddress", 
+    "MailingAddress", 
+    "PayeeAddress", 
+    "Printed", 
+    "GLTransactionID", 
+    "APBasis", 
+    "CheckImage", 
+    "StubImage", 
+    "Voided", 
+    "VoidGLTransactionID", 
+    "BatchID", 
+    "PaymentCCID", 
+    "PaymentCostCenter", 
+    "CentralDisbursmentApplied", 
+    "FromAPI", 
+    "PaymentType", 
+    "AcceptedAPI", 
+    "ACHBatchID", 
+    "ACHCommitted", 
+    "IsDeleted", 
+    "DateCreated", 
+    "LastModified", 
+    "Links", 
+    "Invoices", 
+    "InvoiceIDs", 
+    "AppliedPayments", 
+    "PostedCheckNumber", 
+    "PaymentInvoices", 
+    "ManualPayment", 
+    "Reconciled", 
+    "PositivePay"
+  ], 
+  "properties": {
+    "PaymentID": {
+      "type": "integer", 
+      "title": "The Paymentid", 
+      "default": 0, 
+      "examples": [
+        666
+      ]
+    }, 
+    "ClientID": {
+      "type": "integer", 
+      "title": "The Clientid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "ClientName": {
+      "type": "string", 
+      "title": "The Clientname", 
+      "default": "", 
+      "examples": [
+        ""
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "PaymentGLAccountID": {
+      "type": "integer", 
+      "title": "The Paymentglaccountid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "PaymentGLAccount": {
+      "type": "string", 
+      "title": "The Paymentglaccount", 
+      "default": "", 
+      "examples": [
+        ""
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "PayeeName": {
+      "type": "string", 
+      "title": "The Payeename", 
+      "default": "", 
+      "examples": [
+        ""
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "PayeeType": {
+      "type": "integer", 
+      "title": "The Payeetype", 
+      "default": 0, 
+      "examples": [
+        14
+      ]
+    }, 
+    "PayeeTypeString": {
+      "type": "string", 
+      "title": "The Payeetypestring", 
+      "default": "", 
+      "examples": [
+        "Vendor"
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "PayeeID": {
+      "type": "integer", 
+      "title": "The Payeeid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "CheckNumberSeries": {
+      "type": "integer", 
+      "title": "The Checknumberseries", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "CheckNumber": {
+      "type": "integer", 
+      "title": "The Checknumber", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "Amount": {
+      "type": "integer", 
+      "title": "The Amount", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "PaymentDate": {
+      "type": "string", 
+      "title": "The Paymentdate", 
+      "default": "", 
+      "examples": [
+        "2000-01-01T00:00:00"
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "Memo": {
+      "type": "string", 
+      "title": "The Memo", 
+      "default": "", 
+      "examples": [
+        ""
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "PayerAddress": {
+      "type": "object", 
+      "title": "The Payeraddress", 
+      "required": [
+        "AddressID", 
+        "RefID", 
+        "RefType", 
+        "IsDeleted", 
+        "Name", 
+        "InCareOf", 
+        "UnitNumber", 
+        "Address1", 
+        "Address2", 
+        "City", 
+        "State", 
+        "ZipCode", 
+        "Country", 
+        "OneLine"
+      ], 
+      "properties": {
+        "AddressID": {
+          "type": "integer", 
+          "title": "The Addressid", 
+          "default": 0, 
+          "examples": [
+            0
+          ]
+        }, 
+        "RefID": {
+          "type": "null", 
+          "title": "The Refid", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "RefType": {
+          "type": "null", 
+          "title": "The Reftype", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "IsDeleted": {
+          "type": "null", 
+          "title": "The Isdeleted", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Name": {
+          "type": "null", 
+          "title": "The Name", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "InCareOf": {
+          "type": "null", 
+          "title": "The Incareof", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "UnitNumber": {
+          "type": "null", 
+          "title": "The Unitnumber", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address1": {
+          "type": "null", 
+          "title": "The Address1", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address2": {
+          "type": "null", 
+          "title": "The Address2", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "City": {
+          "type": "null", 
+          "title": "The City", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "State": {
+          "type": "null", 
+          "title": "The State", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "ZipCode": {
+          "type": "null", 
+          "title": "The Zipcode", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Country": {
+          "type": "null", 
+          "title": "The Country", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "OneLine": {
+          "type": "string", 
+          "title": "The Oneline", 
+          "default": "", 
+          "examples": [
+            ""
+          ], 
+          "pattern": "^(.*)$"
+        }
+      }
+    }, 
+    "RemitAddress": {
+      "type": "object", 
+      "title": "The Remitaddress", 
+      "required": [
+        "AddressID", 
+        "RefID", 
+        "RefType", 
+        "IsDeleted", 
+        "Name", 
+        "InCareOf", 
+        "UnitNumber", 
+        "Address1", 
+        "Address2", 
+        "City", 
+        "State", 
+        "ZipCode", 
+        "Country", 
+        "OneLine"
+      ], 
+      "properties": {
+        "AddressID": {
+          "type": "integer", 
+          "title": "The Addressid", 
+          "default": 0, 
+          "examples": [
+            0
+          ]
+        }, 
+        "RefID": {
+          "type": "null", 
+          "title": "The Refid", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "RefType": {
+          "type": "null", 
+          "title": "The Reftype", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "IsDeleted": {
+          "type": "null", 
+          "title": "The Isdeleted", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Name": {
+          "type": "null", 
+          "title": "The Name", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "InCareOf": {
+          "type": "null", 
+          "title": "The Incareof", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "UnitNumber": {
+          "type": "null", 
+          "title": "The Unitnumber", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address1": {
+          "type": "null", 
+          "title": "The Address1", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address2": {
+          "type": "null", 
+          "title": "The Address2", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "City": {
+          "type": "null", 
+          "title": "The City", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "State": {
+          "type": "null", 
+          "title": "The State", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "ZipCode": {
+          "type": "null", 
+          "title": "The Zipcode", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Country": {
+          "type": "null", 
+          "title": "The Country", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "OneLine": {
+          "type": "string", 
+          "title": "The Oneline", 
+          "default": "", 
+          "examples": [
+            ""
+          ], 
+          "pattern": "^(.*)$"
+        }
+      }
+    }, 
+    "MailingAddress": {
+      "type": "object", 
+      "title": "The Mailingaddress", 
+      "required": [
+        "AddressID", 
+        "RefID", 
+        "RefType", 
+        "IsDeleted", 
+        "Name", 
+        "InCareOf", 
+        "UnitNumber", 
+        "Address1", 
+        "Address2", 
+        "City", 
+        "State", 
+        "ZipCode", 
+        "Country", 
+        "OneLine"
+      ], 
+      "properties": {
+        "AddressID": {
+          "type": "integer", 
+          "title": "The Addressid", 
+          "default": 0, 
+          "examples": [
+            0
+          ]
+        }, 
+        "RefID": {
+          "type": "null", 
+          "title": "The Refid", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "RefType": {
+          "type": "null", 
+          "title": "The Reftype", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "IsDeleted": {
+          "type": "null", 
+          "title": "The Isdeleted", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Name": {
+          "type": "null", 
+          "title": "The Name", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "InCareOf": {
+          "type": "null", 
+          "title": "The Incareof", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "UnitNumber": {
+          "type": "null", 
+          "title": "The Unitnumber", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address1": {
+          "type": "null", 
+          "title": "The Address1", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address2": {
+          "type": "null", 
+          "title": "The Address2", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "City": {
+          "type": "null", 
+          "title": "The City", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "State": {
+          "type": "null", 
+          "title": "The State", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "ZipCode": {
+          "type": "null", 
+          "title": "The Zipcode", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Country": {
+          "type": "null", 
+          "title": "The Country", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "OneLine": {
+          "type": "string", 
+          "title": "The Oneline", 
+          "default": "", 
+          "examples": [
+            ""
+          ], 
+          "pattern": "^(.*)$"
+        }
+      }
+    }, 
+    "PayeeAddress": {
+      "type": "object", 
+      "title": "The Payeeaddress", 
+      "required": [
+        "AddressID", 
+        "RefID", 
+        "RefType", 
+        "IsDeleted", 
+        "Name", 
+        "InCareOf", 
+        "UnitNumber", 
+        "Address1", 
+        "Address2", 
+        "City", 
+        "State", 
+        "ZipCode", 
+        "Country", 
+        "OneLine"
+      ], 
+      "properties": {
+        "AddressID": {
+          "type": "integer", 
+          "title": "The Addressid", 
+          "default": 0, 
+          "examples": [
+            0
+          ]
+        }, 
+        "RefID": {
+          "type": "null", 
+          "title": "The Refid", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "RefType": {
+          "type": "null", 
+          "title": "The Reftype", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "IsDeleted": {
+          "type": "null", 
+          "title": "The Isdeleted", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Name": {
+          "type": "null", 
+          "title": "The Name", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "InCareOf": {
+          "type": "null", 
+          "title": "The Incareof", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "UnitNumber": {
+          "type": "null", 
+          "title": "The Unitnumber", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address1": {
+          "type": "null", 
+          "title": "The Address1", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Address2": {
+          "type": "null", 
+          "title": "The Address2", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "City": {
+          "type": "null", 
+          "title": "The City", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "State": {
+          "type": "null", 
+          "title": "The State", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "ZipCode": {
+          "type": "null", 
+          "title": "The Zipcode", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "Country": {
+          "type": "null", 
+          "title": "The Country", 
+          "default": null, 
+          "examples": [
+            null
+          ]
+        }, 
+        "OneLine": {
+          "type": "string", 
+          "title": "The Oneline", 
+          "default": "", 
+          "examples": [
+            ""
+          ], 
+          "pattern": "^(.*)$"
+        }
+      }
+    }, 
+    "Printed": {
+      "type": "boolean", 
+      "title": "The Printed", 
+      "default": false, 
+      "examples": [
+        true
+      ]
+    }, 
+    "GLTransactionID": {
+      "type": "integer", 
+      "title": "The Gltransactionid", 
+      "default": 0, 
+      "examples": [
+        6715
+      ]
+    }, 
+    "APBasis": {
+      "type": "integer", 
+      "title": "The Apbasis", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "CheckImage": {
+      "type": "null", 
+      "title": "The Checkimage", 
+      "default": null, 
+      "examples": [
+        null
+      ]
+    }, 
+    "StubImage": {
+      "type": "null", 
+      "title": "The Stubimage", 
+      "default": null, 
+      "examples": [
+        null
+      ]
+    }, 
+    "Voided": {
+      "type": "boolean", 
+      "title": "The Voided", 
+      "default": false, 
+      "examples": [
+        false
+      ]
+    }, 
+    "VoidGLTransactionID": {
+      "type": "integer", 
+      "title": "The Voidgltransactionid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "BatchID": {
+      "type": "integer", 
+      "title": "The Batchid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "PaymentCCID": {
+      "type": "integer", 
+      "title": "The Paymentccid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "PaymentCostCenter": {
+      "type": "string", 
+      "title": "The Paymentcostcenter", 
+      "default": "", 
+      "examples": [
+        ""
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "CentralDisbursmentApplied": {
+      "type": "boolean", 
+      "title": "The Centraldisbursmentapplied", 
+      "default": false, 
+      "examples": [
+        false
+      ]
+    }, 
+    "FromAPI": {
+      "type": "boolean", 
+      "title": "The Fromapi", 
+      "default": false, 
+      "examples": [
+        true
+      ]
+    }, 
+    "PaymentType": {
+      "type": "integer", 
+      "title": "The Paymenttype", 
+      "default": 0, 
+      "examples": [
+        -5
+      ]
+    }, 
+    "AcceptedAPI": {
+      "type": "boolean", 
+      "title": "The Acceptedapi", 
+      "default": false, 
+      "examples": [
+        false
+      ]
+    }, 
+    "ACHBatchID": {
+      "type": "integer", 
+      "title": "The Achbatchid", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "ACHCommitted": {
+      "type": "boolean", 
+      "title": "The Achcommitted", 
+      "default": false, 
+      "examples": [
+        false
+      ]
+    }, 
+    "IsDeleted": {
+      "type": "boolean", 
+      "title": "The Isdeleted", 
+      "default": false, 
+      "examples": [
+        false
+      ]
+    }, 
+    "DateCreated": {
+      "type": "string", 
+      "title": "The Datecreated", 
+      "default": "", 
+      "examples": [
+        "2000-01-01T00:00:00"
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "LastModified": {
+      "type": "string", 
+      "title": "The Lastmodified", 
+      "default": "", 
+      "examples": [
+        "2000-01-01T00:00:00"
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "Links": {
+      "type": "array", 
+      "title": "The Links"
+    }, 
+    "Invoices": {
+      "type": "array", 
+      "title": "The Invoices", 
+      "items": {
+        "type": "object", 
+        "title": "The Items", 
+        "required": [
+          "InvoiceID", 
+          "ClientID", 
+          "InvoiceNumber", 
+          "APBasis", 
+          "ActualNumberOfApprovals", 
+          "Amount", 
+          "PONumber", 
+          "AcctTermID", 
+          "AcctTerm", 
+          "PaymentTypeID", 
+          "ManualCheckNumber", 
+          "ManualPaymentDate", 
+          "CombinePayments", 
+          "PaymentGLAccountID", 
+          "VendorNotes", 
+          "InvoiceDate", 
+          "DueDate", 
+          "Received", 
+          "ReceivedDate", 
+          "Validated", 
+          "ValidatedDate", 
+          "OnHold", 
+          "OnHoldDate", 
+          "APApproved", 
+          "APApprovedDate", 
+          "MgrApproved", 
+          "MgrApprovedDate", 
+          "BoardApproved", 
+          "BoardApprovedDate", 
+          "ReadyToPay", 
+          "ReadyToPayDate", 
+          "Rejected", 
+          "RejectedDate", 
+          "RejectedBy", 
+          "RejectedByName", 
+          "RejectedReason", 
+          "APPosted", 
+          "PostingDate", 
+          "Voided", 
+          "VoidDate", 
+          "VoidGLTransactionID", 
+          "ChangeInvoiceID", 
+          "Refund", 
+          "Recurring", 
+          "UsePrevAmounts", 
+          "RecInvCategoryID", 
+          "SchFrequency", 
+          "SchStartDate", 
+          "SchEndDate", 
+          "RecurringDescription", 
+          "PaymentCCID", 
+          "InvoiceStatus", 
+          "AmountPaid", 
+          "RemainingBalance", 
+          "RequiredNumberOfApprovers", 
+          "IsDeleted", 
+          "DateCreated", 
+          "LastModified", 
+          "APAccountID", 
+          "PayeeID", 
+          "PayeeType", 
+          "PayeeName", 
+          "Note", 
+          "LineItems", 
+          "Links"
+        ], 
+        "properties": {
+          "InvoiceID": {
+            "type": "integer", 
+            "title": "The Invoiceid", 
+            "default": 0, 
+            "examples": [
+              1
+            ]
+          }, 
+          "ClientID": {
+            "type": "integer", 
+            "title": "The Clientid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "InvoiceNumber": {
+            "type": "string", 
+            "title": "The Invoicenumber", 
+            "default": "", 
+            "examples": [
+              "sample string 2"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "APBasis": {
+            "type": "integer", 
+            "title": "The Apbasis", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "ActualNumberOfApprovals": {
+            "type": "integer", 
+            "title": "The Actualnumberofapprovals", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "Amount": {
+            "type": "integer", 
+            "title": "The Amount", 
+            "default": 0, 
+            "examples": [
+              8
+            ]
+          }, 
+          "PONumber": {
+            "type": "string", 
+            "title": "The Ponumber", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "AcctTermID": {
+            "type": "integer", 
+            "title": "The Accttermid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "AcctTerm": {
+            "type": "string", 
+            "title": "The Acctterm", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "PaymentTypeID": {
+            "type": "integer", 
+            "title": "The Paymenttypeid", 
+            "default": 0, 
+            "examples": [
+              -5
+            ]
+          }, 
+          "ManualCheckNumber": {
+            "type": "integer", 
+            "title": "The Manualchecknumber", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "ManualPaymentDate": {
+            "type": "string", 
+            "title": "The Manualpaymentdate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "CombinePayments": {
+            "type": "boolean", 
+            "title": "The Combinepayments", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "PaymentGLAccountID": {
+            "type": "integer", 
+            "title": "The Paymentglaccountid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "VendorNotes": {
+            "type": "string", 
+            "title": "The Vendornotes", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "InvoiceDate": {
+            "type": "string", 
+            "title": "The Invoicedate", 
+            "default": "", 
+            "examples": [
+              "0001-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "DueDate": {
+            "type": "string", 
+            "title": "The Duedate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "Received": {
+            "type": "boolean", 
+            "title": "The Received", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "ReceivedDate": {
+            "type": "string", 
+            "title": "The Receiveddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "Validated": {
+            "type": "boolean", 
+            "title": "The Validated", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "ValidatedDate": {
+            "type": "string", 
+            "title": "The Validateddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "OnHold": {
+            "type": "boolean", 
+            "title": "The Onhold", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "OnHoldDate": {
+            "type": "string", 
+            "title": "The Onholddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "APApproved": {
+            "type": "boolean", 
+            "title": "The Apapproved", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "APApprovedDate": {
+            "type": "string", 
+            "title": "The Apapproveddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "MgrApproved": {
+            "type": "boolean", 
+            "title": "The Mgrapproved", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "MgrApprovedDate": {
+            "type": "string", 
+            "title": "The Mgrapproveddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "BoardApproved": {
+            "type": "boolean", 
+            "title": "The Boardapproved", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "BoardApprovedDate": {
+            "type": "string", 
+            "title": "The Boardapproveddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "ReadyToPay": {
+            "type": "boolean", 
+            "title": "The Readytopay", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "ReadyToPayDate": {
+            "type": "string", 
+            "title": "The Readytopaydate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "Rejected": {
+            "type": "boolean", 
+            "title": "The Rejected", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "RejectedDate": {
+            "type": "string", 
+            "title": "The Rejecteddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "RejectedBy": {
+            "type": "integer", 
+            "title": "The Rejectedby", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "RejectedByName": {
+            "type": "string", 
+            "title": "The Rejectedbyname", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "RejectedReason": {
+            "type": "string", 
+            "title": "The Rejectedreason", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "APPosted": {
+            "type": "boolean", 
+            "title": "The Apposted", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "PostingDate": {
+            "type": "string", 
+            "title": "The Postingdate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "Voided": {
+            "type": "boolean", 
+            "title": "The Voided", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "VoidDate": {
+            "type": "string", 
+            "title": "The Voiddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "VoidGLTransactionID": {
+            "type": "integer", 
+            "title": "The Voidgltransactionid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "ChangeInvoiceID": {
+            "type": "integer", 
+            "title": "The Changeinvoiceid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "Refund": {
+            "type": "boolean", 
+            "title": "The Refund", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "Recurring": {
+            "type": "boolean", 
+            "title": "The Recurring", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "UsePrevAmounts": {
+            "type": "boolean", 
+            "title": "The Useprevamounts", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "RecInvCategoryID": {
+            "type": "integer", 
+            "title": "The Recinvcategoryid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "SchFrequency": {
+            "type": "integer", 
+            "title": "The Schfrequency", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "SchStartDate": {
+            "type": "string", 
+            "title": "The Schstartdate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "SchEndDate": {
+            "type": "string", 
+            "title": "The Schenddate", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "RecurringDescription": {
+            "type": "string", 
+            "title": "The Recurringdescription", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "PaymentCCID": {
+            "type": "integer", 
+            "title": "The Paymentccid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "InvoiceStatus": {
+            "type": "integer", 
+            "title": "The Invoicestatus", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "AmountPaid": {
+            "type": "integer", 
+            "title": "The Amountpaid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "RemainingBalance": {
+            "type": "integer", 
+            "title": "The Remainingbalance", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "RequiredNumberOfApprovers": {
+            "type": "integer", 
+            "title": "The Requirednumberofapprovers", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "IsDeleted": {
+            "type": "boolean", 
+            "title": "The Isdeleted", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "DateCreated": {
+            "type": "string", 
+            "title": "The Datecreated", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "LastModified": {
+            "type": "string", 
+            "title": "The Lastmodified", 
+            "default": "", 
+            "examples": [
+              "2000-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "APAccountID": {
+            "type": "integer", 
+            "title": "The Apaccountid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "PayeeID": {
+            "type": "integer", 
+            "title": "The Payeeid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "PayeeType": {
+            "type": "integer", 
+            "title": "The Payeetype", 
+            "default": 0, 
+            "examples": [
+              14
+            ]
+          }, 
+          "PayeeName": {
+            "type": "string", 
+            "title": "The Payeename", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "Note": {
+            "type": "string", 
+            "title": "The Note", 
+            "default": "", 
+            "examples": [
+              ""
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "LineItems": {
+            "type": "array", 
+            "title": "The Lineitems", 
+            "items": {
+              "type": "object", 
+              "title": "The Items", 
+              "required": [
+                "LineItemID", 
+                "InvoiceID", 
+                "VendorCode", 
+                "CostCenterID", 
+                "ExpenseGLAccountID", 
+                "Amount", 
+                "Description", 
+                "Quantity", 
+                "UnitOfMeasure", 
+                "UnitPrice", 
+                "Is1099Item", 
+                "Adjustment", 
+                "PostingDate", 
+                "GLTransactionID", 
+                "WorkOrderNumber", 
+                "VendorCredit", 
+                "RecNextAmount", 
+                "ManualVendorCredit", 
+                "LongDescription", 
+                "AmountApplied", 
+                "PaymentAmount", 
+                "RemainingBalance"
+              ], 
+              "properties": {
+                "LineItemID": {
+                  "type": "integer", 
+                  "title": "The Lineitemid", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "InvoiceID": {
+                  "type": "integer", 
+                  "title": "The Invoiceid", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "VendorCode": {
+                  "type": "integer", 
+                  "title": "The Vendorcode", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "CostCenterID": {
+                  "type": "integer", 
+                  "title": "The Costcenterid", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "ExpenseGLAccountID": {
+                  "type": "integer", 
+                  "title": "The Expenseglaccountid", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "Amount": {
+                  "type": "integer", 
+                  "title": "The Amount", 
+                  "default": 0, 
+                  "examples": [
+                    3
+                  ]
+                }, 
+                "Description": {
+                  "type": "string", 
+                  "title": "The Description", 
+                  "default": "", 
+                  "examples": [
+                    ""
+                  ], 
+                  "pattern": "^(.*)$"
+                }, 
+                "Quantity": {
+                  "type": "integer", 
+                  "title": "The Quantity", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "UnitOfMeasure": {
+                  "type": "string", 
+                  "title": "The Unitofmeasure", 
+                  "default": "", 
+                  "examples": [
+                    ""
+                  ], 
+                  "pattern": "^(.*)$"
+                }, 
+                "UnitPrice": {
+                  "type": "integer", 
+                  "title": "The Unitprice", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "Is1099Item": {
+                  "type": "boolean", 
+                  "title": "The Is1099item", 
+                  "default": false, 
+                  "examples": [
+                    true
+                  ]
+                }, 
+                "Adjustment": {
+                  "type": "integer", 
+                  "title": "The Adjustment", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "PostingDate": {
+                  "type": "string", 
+                  "title": "The Postingdate", 
+                  "default": "", 
+                  "examples": [
+                    "2000-01-01T00:00:00"
+                  ], 
+                  "pattern": "^(.*)$"
+                }, 
+                "GLTransactionID": {
+                  "type": "integer", 
+                  "title": "The Gltransactionid", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "WorkOrderNumber": {
+                  "type": "string", 
+                  "title": "The Workordernumber", 
+                  "default": "", 
+                  "examples": [
+                    ""
+                  ], 
+                  "pattern": "^(.*)$"
+                }, 
+                "VendorCredit": {
+                  "type": "boolean", 
+                  "title": "The Vendorcredit", 
+                  "default": false, 
+                  "examples": [
+                    false
+                  ]
+                }, 
+                "RecNextAmount": {
+                  "type": "integer", 
+                  "title": "The Recnextamount", 
+                  "default": 0, 
+                  "examples": [
+                    0
+                  ]
+                }, 
+                "ManualVendorCredit": {
+                  "type": "boolean", 
+                  "title": "The Manualvendorcredit", 
+                  "default": false, 
+                  "examples": [
+                    false
+                  ]
+                }, 
+                "LongDescription": {
+                  "type": "string", 
+                  "title": "The Longdescription", 
+                  "default": "", 
+                  "examples": [
+                    ""
+                  ], 
+                  "pattern": "^(.*)$"
+                }, 
+                "AmountApplied": {
+                  "type": "integer", 
+                  "title": "The Amountapplied", 
+                  "default": 0, 
+                  "examples": [
+                    3
+                  ]
+                }, 
+                "PaymentAmount": {
+                  "type": "integer", 
+                  "title": "The Paymentamount", 
+                  "default": 0, 
+                  "examples": [
+                    3
+                  ]
+                }, 
+                "RemainingBalance": {
+                  "type": "integer", 
+                  "title": "The Remainingbalance", 
+                  "default": 0, 
+                  "examples": [
+                    3
+                  ]
+                }
+              }
+            }
+          }, 
+          "Links": {
+            "type": "array", 
+            "title": "The Links"
+          }
+        }
+      }
+    }, 
+    "InvoiceIDs": {
+      "type": "string", 
+      "title": "The Invoiceids", 
+      "default": "", 
+      "examples": [
+        ""
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "AppliedPayments": {
+      "type": "array", 
+      "title": "The Appliedpayments", 
+      "items": {
+        "type": "object", 
+        "title": "The Items", 
+        "required": [
+          "ID", 
+          "PaymentID", 
+          "InvoiceID", 
+          "InvoiceNumber", 
+          "InvoiceDate", 
+          "LineItemID", 
+          "PaymentGLAccountID", 
+          "CostCenterID", 
+          "Amount", 
+          "GLTransactionID", 
+          "VendorCredit", 
+          "Desc", 
+          "UserID", 
+          "LineItemDescription", 
+          "DateCreated"
+        ], 
+        "properties": {
+          "ID": {
+            "type": "integer", 
+            "title": "The Id", 
+            "default": 0, 
+            "examples": [
+              1018
+            ]
+          }, 
+          "PaymentID": {
+            "type": "integer", 
+            "title": "The Paymentid", 
+            "default": 0, 
+            "examples": [
+              666
+            ]
+          }, 
+          "InvoiceID": {
+            "type": "integer", 
+            "title": "The Invoiceid", 
+            "default": 0, 
+            "examples": [
+              1
+            ]
+          }, 
+          "InvoiceNumber": {
+            "type": "null", 
+            "title": "The Invoicenumber", 
+            "default": null, 
+            "examples": [
+              null
+            ]
+          }, 
+          "InvoiceDate": {
+            "type": "string", 
+            "title": "The Invoicedate", 
+            "default": "", 
+            "examples": [
+              "0001-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "LineItemID": {
+            "type": "integer", 
+            "title": "The Lineitemid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "PaymentGLAccountID": {
+            "type": "integer", 
+            "title": "The Paymentglaccountid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "CostCenterID": {
+            "type": "integer", 
+            "title": "The Costcenterid", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "Amount": {
+            "type": "integer", 
+            "title": "The Amount", 
+            "default": 0, 
+            "examples": [
+              3
+            ]
+          }, 
+          "GLTransactionID": {
+            "type": "integer", 
+            "title": "The Gltransactionid", 
+            "default": 0, 
+            "examples": [
+              6715
+            ]
+          }, 
+          "VendorCredit": {
+            "type": "boolean", 
+            "title": "The Vendorcredit", 
+            "default": false, 
+            "examples": [
+              false
+            ]
+          }, 
+          "Desc": {
+            "type": "string", 
+            "title": "The Desc", 
+            "default": "", 
+            "examples": [
+              ", Invoice #:  sample string 2"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "UserID": {
+            "type": "integer", 
+            "title": "The Userid", 
+            "default": 0, 
+            "examples": [
+              -83
+            ]
+          }, 
+          "LineItemDescription": {
+            "type": "null", 
+            "title": "The Lineitemdescription", 
+            "default": null, 
+            "examples": [
+              null
+            ]
+          }, 
+          "DateCreated": {
+            "type": "string", 
+            "title": "The Datecreated", 
+            "default": "", 
+            "examples": [
+              "0001-01-01T00:00:00"
+            ], 
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }, 
+    "PostedCheckNumber": {
+      "type": "string", 
+      "title": "The Postedchecknumber", 
+      "default": "", 
+      "examples": [
+        "0"
+      ], 
+      "pattern": "^(.*)$"
+    }, 
+    "PaymentInvoices": {
+      "type": "array", 
+      "title": "The Paymentinvoices", 
+      "items": {
+        "type": "object", 
+        "title": "The Items", 
+        "required": [
+          "InvoiceID", 
+          "LineItems", 
+          "PaymentAmount"
+        ], 
+        "properties": {
+          "InvoiceID": {
+            "type": "integer", 
+            "title": "The Invoiceid", 
+            "default": 0, 
+            "examples": [
+              1
+            ]
+          }, 
+          "LineItems": {
+            "type": "array", 
+            "title": "The Lineitems", 
+            "items": {
+              "type": "object", 
+              "title": "The Items", 
+              "required": [
+                "LineItemID", 
+                "PaymentAmount"
+              ], 
+              "properties": {
+                "LineItemID": {
+                  "type": "integer", 
+                  "title": "The Lineitemid", 
+                  "default": 0, 
+                  "examples": [
+                    1
+                  ]
+                }, 
+                "PaymentAmount": {
+                  "type": "integer", 
+                  "title": "The Paymentamount", 
+                  "default": 0, 
+                  "examples": [
+                    4
+                  ]
+                }
+              }
+            }
+          }, 
+          "PaymentAmount": {
+            "type": "integer", 
+            "title": "The Paymentamount", 
+            "default": 0, 
+            "examples": [
+              8
+            ]
+          }
+        }
+      }
+    }, 
+    "ManualPayment": {
+      "type": "boolean", 
+      "title": "The Manualpayment", 
+      "default": false, 
+      "examples": [
+        true
+      ]
+    }, 
+    "Reconciled": {
+      "type": "boolean", 
+      "title": "The Reconciled", 
+      "default": false, 
+      "examples": [
+        false
+      ]
+    }, 
+    "PositivePay": {
+      "type": "null", 
+      "title": "The Positivepay", 
+      "default": null, 
+      "examples": [
+        null
+      ]
+    }
+  }
+}

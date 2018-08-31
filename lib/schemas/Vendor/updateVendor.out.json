@@ -1,0 +1,858 @@
+{
+
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "VendorID": {
+      "type": "integer",
+      "title": "The Vendorid",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "VendorType": {
+      "type": "integer",
+      "title": "The Vendortype",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "CompanyName": {
+      "type": "string",
+      "title": "The Companyname",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "VendorCode": {
+      "type": "string",
+      "title": "The Vendorcode",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Location": {
+      "type": "string",
+      "title": "The Location",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "PrimaryContactName": {
+      "type": "string",
+      "title": "The Primarycontactname",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Phone": {
+      "type": "string",
+      "title": "The Phone",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Mobile": {
+      "type": "string",
+      "title": "The Mobile",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Fax": {
+      "type": "string",
+      "title": "The Fax",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Email": {
+      "type": "string",
+      "title": "The Email",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Website": {
+      "type": "string",
+      "title": "The Website",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Address1": {
+      "type": "string",
+      "title": "The Address1",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Address2": {
+      "type": "string",
+      "title": "The Address2",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "City": {
+      "type": "string",
+      "title": "The City",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "County": {
+      "type": "string",
+      "title": "The County",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "State": {
+      "type": "string",
+      "title": "The State",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Zip": {
+      "type": "string",
+      "title": "The Zip",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Country": {
+      "type": "string",
+      "title": "The Country",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "RemitAddress1": {
+      "type": "string",
+      "title": "The Remitaddress1",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "RemitAddress2": {
+      "type": "string",
+      "title": "The Remitaddress2",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "RemitCity": {
+      "type": "string",
+      "title": "The Remitcity",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "RemitState": {
+      "type": "string",
+      "title": "The Remitstate",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "RemitZip": {
+      "type": "string",
+      "title": "The Remitzip",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "RemitCountry": {
+      "type": "string",
+      "title": "The Remitcountry",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "SameAsLocation": {
+      "type": "boolean",
+      "title": "The Sameaslocation",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "VAcctNumber": {
+      "type": "string",
+      "title": "The Vacctnumber",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "EIN": {
+      "type": "string",
+      "title": "The Ein",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "StateTaxID": {
+      "type": "string",
+      "title": "The Statetaxid",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "VAcctTypeID": {
+      "type": "integer",
+      "title": "The Vaccttypeid",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "AcctTermsID": {
+      "type": "integer",
+      "title": "The Accttermsid",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "CreditLimit": {
+      "type": "integer",
+      "title": "The Creditlimit",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "CheckDisplayName": {
+      "type": "string",
+      "title": "The Checkdisplayname",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "PaymentTypesAccepted": {
+      "type": "integer",
+      "title": "The Paymenttypesaccepted",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "Requires1099": {
+      "type": "boolean",
+      "title": "The Requires1099",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "Type1099": {
+      "type": "integer",
+      "title": "The Type1099",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "BusinessLicense": {
+      "type": "string",
+      "title": "The Businesslicense",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "ContractorLicense": {
+      "type": "string",
+      "title": "The Contractorlicense",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "EDDRequired": {
+      "type": "boolean",
+      "title": "The Eddrequired",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "EDDReported": {
+      "type": "boolean",
+      "title": "The Eddreported",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "IsSoleProprietor": {
+      "type": "boolean",
+      "title": "The Issoleproprietor",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "SoleProprietorName": {
+      "type": "string",
+      "title": "The Soleproprietorname",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "SSN": {
+      "type": "string",
+      "title": "The Ssn",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "IsActive": {
+      "type": "boolean",
+      "title": "The Isactive",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "DBA": {
+      "type": "string",
+      "title": "The Dba",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "CombinePayments": {
+      "type": "boolean",
+      "title": "The Combinepayments",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "InsuranceExempt": {
+      "type": "boolean",
+      "title": "The Insuranceexempt",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "ACHBankName": {
+      "type": "string",
+      "title": "The Achbankname",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "ACHAccountNumber": {
+      "type": "string",
+      "title": "The Achaccountnumber",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "ACHRoutingNumber": {
+      "type": "string",
+      "title": "The Achroutingnumber",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "MaintenanceCompany": {
+      "type": "boolean",
+      "title": "The Maintenancecompany",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "Facebook": {
+      "type": "string",
+      "title": "The Facebook",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "Twitter": {
+      "type": "string",
+      "title": "The Twitter",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "LinkedIn": {
+      "type": "string",
+      "title": "The Linkedin",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "IsDeleted": {
+      "type": "boolean",
+      "title": "The Isdeleted",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "DateCreated": {
+      "type": "string",
+      "title": "The Datecreated",
+      "default": "",
+      "examples": [
+        "2018-07-02T10:44:04.781Z"
+      ]
+    },
+    "LastModified": {
+      "type": "string",
+      "title": "The Lastmodified",
+      "default": "",
+      "examples": [
+        "2018-07-02T10:44:04.781Z"
+      ]
+    },
+    "ActivityTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "The 0th",
+        "default": "",
+        "examples": [
+          "string"
+        ]
+      }
+    },
+    "MailMatrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MailingMatrixID": {
+            "type": "integer",
+            "title": "The Mailingmatrixid",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Correspondence": {
+            "type": "string",
+            "title": "The Correspondence",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "EnabledBitMask": {
+            "type": "integer",
+            "title": "The Enabledbitmask",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "DefaultBitMask": {
+            "type": "integer",
+            "title": "The Defaultbitmask",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Fixed": {
+            "type": "boolean",
+            "title": "The Fixed",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "TemplateID": {
+            "type": "integer",
+            "title": "The Templateid",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "AllowOptOut": {
+            "type": "boolean",
+            "title": "The Allowoptout",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "MakeMailMandatory": {
+            "type": "boolean",
+            "title": "The Makemailmandatory",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "UserType": {
+            "type": "integer",
+            "title": "The Usertype",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "IsSet": {
+            "type": "boolean",
+            "title": "The Isset",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "Mail": {
+            "type": "boolean",
+            "title": "The Mail",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "Email": {
+            "type": "boolean",
+            "title": "The Email",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "RefID": {
+            "type": "integer",
+            "title": "The Refid",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "Insurance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "InsuranceID": {
+            "type": "integer",
+            "title": "The Insuranceid",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Name": {
+            "type": "string",
+            "title": "The Name",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "RefType": {
+            "type": "integer",
+            "title": "The Reftype",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "RefID": {
+            "type": "integer",
+            "title": "The Refid",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "InsuranceCompany": {
+            "type": "string",
+            "title": "The Insurancecompany",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "PolicyNumber": {
+            "type": "string",
+            "title": "The Policynumber",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "BeginDate": {
+            "type": "string",
+            "title": "The Begindate",
+            "default": "",
+            "examples": [
+              "2018-07-02T10:44:04.782Z"
+            ]
+          },
+          "ExpirationDate": {
+            "type": "string",
+            "title": "The Expirationdate",
+            "default": "",
+            "examples": [
+              "2018-07-02T10:44:04.782Z"
+            ]
+          },
+          "Amount": {
+            "type": "integer",
+            "title": "The Amount",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "Deductible": {
+            "type": "integer",
+            "title": "The Deductible",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "HoldPaymentsOnExpiration": {
+            "type": "boolean",
+            "title": "The Holdpaymentsonexpiration",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "InsuranceTypeID": {
+            "type": "integer",
+            "title": "The Insurancetypeid",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "InsuranceType": {
+            "type": "string",
+            "title": "The Insurancetype",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Notes": {
+            "type": "string",
+            "title": "The Notes",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "AgentName": {
+            "type": "string",
+            "title": "The Agentname",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "AgentCompanyName": {
+            "type": "string",
+            "title": "The Agentcompanyname",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Address1": {
+            "type": "string",
+            "title": "The Address1",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Address2": {
+            "type": "string",
+            "title": "The Address2",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "City": {
+            "type": "string",
+            "title": "The City",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "State": {
+            "type": "string",
+            "title": "The State",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "ZipCode": {
+            "type": "string",
+            "title": "The Zipcode",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Country": {
+            "type": "string",
+            "title": "The Country",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Phone": {
+            "type": "string",
+            "title": "The Phone",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Fax": {
+            "type": "string",
+            "title": "The Fax",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Cell": {
+            "type": "string",
+            "title": "The Cell",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "Email": {
+            "type": "string",
+            "title": "The Email",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "MgmtCoAdditionalInsured": {
+            "type": "boolean",
+            "title": "The Mgmtcoadditionalinsured",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "Resale": {
+            "type": "boolean",
+            "title": "The Resale",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "IsDeleted": {
+            "type": "boolean",
+            "title": "The Isdeleted",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "DateCreated": {
+            "type": "string",
+            "title": "The Datecreated",
+            "default": "",
+            "examples": [
+              "2018-07-02T10:44:04.782Z"
+            ]
+          },
+          "LastModified": {
+            "type": "string",
+            "title": "The Lastmodified",
+            "default": "",
+            "examples": [
+              "2018-07-02T10:44:04.782Z"
+            ]
+          }
+        }
+      }
+    },
+    "Links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string",
+            "title": "The Rel",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          },
+          "href": {
+            "type": "string",
+            "title": "The Href",
+            "default": "",
+            "examples": [
+              "string"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

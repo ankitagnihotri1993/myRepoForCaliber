@@ -1,0 +1,161 @@
+{
+  "definitions": {}, 
+  "type": "object", 
+  "title": "The Root", 
+  "required": [
+    "CheckNumber", 
+    "Amount", 
+    "Invoices", 
+    "PaymentInvoices"
+  ], 
+  "properties": {
+    "CheckNumber": {
+      "type": "integer", 
+      "title": "The Checknumber", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "Amount": {
+      "type": "integer", 
+      "title": "The Amount", 
+      "default": 0, 
+      "examples": [
+        0
+      ]
+    }, 
+    "Invoices": {
+      "type": "array", 
+      "title": "The Invoices", 
+      "items": {
+        "type": "object", 
+        "title": "The Items", 
+        "required": [
+          "InvoiceID", 
+          "InvoiceNumber", 
+          "APBasis", 
+          "Amount", 
+          "LineItems"
+        ], 
+        "properties": {
+          "InvoiceID": {
+            "type": "integer", 
+            "title": "The Invoiceid", 
+            "default": 0, 
+            "examples": [
+              1
+            ]
+          }, 
+          "InvoiceNumber": {
+            "type": "string", 
+            "title": "The Invoicenumber", 
+            "default": "", 
+            "examples": [
+              "sample string 2"
+            ], 
+            "pattern": "^(.*)$"
+          }, 
+          "APBasis": {
+            "type": "integer", 
+            "title": "The Apbasis", 
+            "default": 0, 
+            "examples": [
+              0
+            ]
+          }, 
+          "Amount": {
+            "type": "integer", 
+            "title": "The Amount", 
+            "default": 0, 
+            "examples": [
+              4
+            ]
+          }, 
+          "LineItems": {
+            "type": "array", 
+            "title": "The Lineitems", 
+            "items": {
+              "type": "object", 
+              "title": "The Items", 
+              "required": [
+                "PaymentAmount"
+              ], 
+              "properties": {
+                "PaymentAmount": {
+                  "type": "integer", 
+                  "title": "The Paymentamount", 
+                  "default": 0, 
+                  "examples": [
+                    4
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }, 
+    "PaymentInvoices": {
+      "type": "array", 
+      "title": "The Paymentinvoices", 
+      "items": {
+        "type": "object", 
+        "title": "The Items", 
+        "required": [
+          "InvoiceID", 
+          "LineItems", 
+          "PaymentAmount"
+        ], 
+        "properties": {
+          "InvoiceID": {
+            "type": "integer", 
+            "title": "The Invoiceid", 
+            "default": 0, 
+            "examples": [
+              1
+            ]
+          }, 
+          "LineItems": {
+            "type": "array", 
+            "title": "The Lineitems", 
+            "items": {
+              "type": "object", 
+              "title": "The Items", 
+              "required": [
+                "LineItemID", 
+                "PaymentAmount"
+              ], 
+              "properties": {
+                "LineItemID": {
+                  "type": "integer", 
+                  "title": "The Lineitemid", 
+                  "default": 0, 
+                  "examples": [
+                    1
+                  ]
+                }, 
+                "PaymentAmount": {
+                  "type": "integer", 
+                  "title": "The Paymentamount", 
+                  "default": 0, 
+                  "examples": [
+                    4
+                  ]
+                }
+              }
+            }
+          }, 
+          "PaymentAmount": {
+            "type": "integer", 
+            "title": "The Paymentamount", 
+            "default": 0, 
+            "examples": [
+              4
+            ]
+          }
+        }
+      }
+    }
+  }
+}

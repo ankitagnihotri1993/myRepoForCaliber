@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "InvoiceID": {
+      "type": "integer",
+      "title": "The Invoiceid Schema ",
+      "default": 0,
+      "examples": [
+        1034
+      ]
+    },
+    "LineItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "LineItemID": {
+            "type": "integer",
+            "title": "The Lineitemid Schema ",
+            "default": 0,
+            "examples": [
+              1606
+            ]
+          },
+          "PaymentAmount": {
+            "type": "integer",
+            "title": "The Paymentamount Schema ",
+            "default": 0,
+            "examples": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "PaymentAmount": {
+      
+      "type": "integer",
+      "title": "The Paymentamount Schema ",
+      "default": 0,
+      "examples": [
+	  
+        12
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "definitions": {},
+      "properties": {
+      "invoiceId": {
+        "type": "integer",
+        "title": "Invoice Id",
+        "default": 0,
+        "examples": [
+          1
+        ]
+      }
+    }
+  }

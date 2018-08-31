@@ -1,0 +1,236 @@
+"use strict";
+const messages = require('elasticio-node').messages;
+const _ = require("underscore");
+const caliberService = require("./lib/commons/services/CaliberService.js");
+const mtService = require("./lib/commons/services/MTService.js");
+
+exports.process = processTrigger;
+
+/*** 
+ * @param msg incoming messages which is empty for triggers
+ * @param cfg object to retrieve triggers configuration values, such as endPointURL,apiKey,username,password 
+ * @param snapshot save the current state of integration step for the future reference. 
+ */
+async function processTrigger(cfg) {
+   
+  let clientList = await caliberService.getAllClient(cfg);
+  if (clientList == null || clientList == undefined || clientList=="") return;
+
+    for(var i=0; i<clientList.length; i++ )     
+    {
+
+     var client=  clientList[i];
+     console.log("ClientID"+client.ClientID);
+
+     console.log("clientObj " + JSON.stringify(client));
+      createSubsidiary(client).then( function (subsidiaryData) 
+    {
+     if (subsidiaryData != null && subsidiaryData != undefined && subsidiaryData!="") 
+     {
+       console.log("subsidiary created " + JSON.stringify(subsidiaryData));
+       // Create GL Acccount in MineralTree
+      
+         caliberService.getGLAccountByClient(cfg,client.ClientID).then(function (glsAccounts){ 
+          console.log("GL Data "+ JSON.stringify(glsAccounts));
+
+        if (glsAccounts != null && glsAccounts != undefined && glsAccounts!="") 
+        {
+          CreateGLAccount(glsAccounts,subsidiaryData.id);
+        }
+      });
+     
+    // Create Vendor in MineralTree
+     
+     caliberService.getVendorByClient(cfg,client.ClientID).then(function (vendor){ 
+        if (vendor != null && vendor != undefined && vendor!="") 
+        {
+           CreateVendor(vendor,subsidiaryData.id);
+        }
+    });
+    
+    // Create Cost Center in MineralTree
+
+     caliberService.getCostCenterByClient(cfg,client.ClientID).then(function (CostCenter){ 
+   console.log("CostCenter " + JSON.stringify(CostCenter));
+     if (CostCenter != null && CostCenter != undefined && CostCenter!="") 
+        {
+       CreateCostCenter(CostCenter,subsidiaryData.id);
+        }
+    });
+}   
+    
+});   
+}
+}
+function CreateVendor(vendors,subsidiaryId)
+{
+    vendors.forEach(vendorElement => {  
+        var vendorBody={
+                 vendor: {
+                form1099Enabled: true,
+                 externalId: 18,
+                  name: vendorElement.CompanyName,
+                  active: true,
+                  address: {
+                   name: vendorElement.CompanyName,
+                   address1: vendorElement.Address1,
+                   address2: vendorElement.Address2,
+                    postalCode: vendorElement.Zip,
+                    town: vendorElement.City,
+                    ctrySubDivision: vendorElement.State,
+                    country: vendorElement.Country
+                  },
+                 legalName: vendorElement.CompanyName,
+                  vendorType: "SUBSIDIARY",
+                  phones: [
+                    {
+                      number: vendorElement.Phone,
+                      isFax: false
+                    },
+                    {
+                      number: vendorElement.Mobile,
+                      isFax: true
+                    }
+                  ],
+                  fundingMethods: [
+                    {
+                      type: "ACH",
+                      bankAccount: {
+                       accountNumber: vendorElement.ACHAccountNumber,
+                        routingNumber: vendorElement.ACHRoutingNumber
+                      }
+                    }
+                  ],
+                  emails: [
+                    vendorElement.Email
+                  ],
+                  primarySubsidiary: { id: subsidiaryId } ,
+                  taxId: "",
+                  vatNumber: 0
+                }
+              
+          }
+
+      mtService.createVendor(vendorBody).then(function (vendorResult){ 
+        console.log("Created Vendor "+ JSON.stringify(vendorResult));
+    });
+
+});
+
+}
+function CreateCostCenter(CostCenter,subsidiaryId)
+{
+    CostCenter.forEach(CCElement => {  
+        var CostCenterBody={
+              classification: {
+                   subsidiaries: [
+                     {
+                      id: subsidiaryId
+                    }
+                  ],
+                  externalId: CCElement.CostCenterID,
+                  name: CCElement.CostCenterName,
+                  active: true
+                }
+              }
+      mtService.createClassification(CostCenterBody).then(function (CCResult){ 
+      console.log("Classification Created "+ JSON.stringify(CCResult));
+    });
+
+    });
+}
+async function createSubsidiary(clientObj)
+{
+   var  bodyData={
+      subsidiary: {
+     externalId: clientObj.ClientID,
+     name: clientObj.ClientName,
+     externalParentId: clientObj.ClientID
+ }
+}
+return await mtService.createSubsidiary(bodyData);
+}
+function CreateGLAccount(glsAccounts,subsidiaryId)
+{
+
+  console.log("invoked gl ");
+
+
+    glsAccounts.forEach(GLElement => {  
+           
+    var _ledgerType= GetLedgerType(GLElement.ledgerType);
+
+  console.log("_ledgerType "+_ledgerType);
+
+        var glbody={
+            glAccount: {
+              subsidiaries: [{
+                  id: subsidiaryId
+                  } ], 
+              departmentRequired: true,
+              locationRequired: true,
+              projectRequired: true,
+              customerRequired: true,
+              vendorRequired: true,
+              employeeRequired: true,
+              itemRequired: true,
+              classRequired: true,
+              ledgerType: _ledgerType,
+              accountNumber: GLElement.AccountNumber,
+              externalId: GLElement.AccountID,
+              name: GLElement.AccountName,
+              active: true
+            }
+          }
+
+      mtService.createGLAccount(glbody).then(function (glAccounts){ 
+      console.log("Created GL Account "+ JSON.stringify(glsAccounts));
+    });
+
+    });
+}
+function GetLedgerType(ledgerType)
+{
+ if(ledgerType=="Accounts Payable")
+{
+    return "AP_ACCOUNT";
+}
+if(ledgerType=="Expense")
+{
+    return "EXPENSE_ACCOUNT";
+}
+if(ledgerType=="Accounts Payable")
+{
+    return "AP_ACCOUNT";
+}
+else
+{
+ return "ACCOUNT";
+}
+}
+function CreatePaymentTerms(cfg)
+{
+
+caliberService.getPaymentTerms(cfg).then(function(paymentTerms){
+
+    paymentTerms.forEach(TermsElement => {  
+        var termBody={
+
+          term: {
+                  dueDays: 0,
+                  discountDays: 0,
+                  discountPercent: 0,
+                  externalId: TermsElement.AcctTermID,
+                  name: TermsElement.AcctTerm,
+                  active: true
+                }
+              } 
+      mtService.createTerms(termBody).then(function (termResult){ 
+      console.log("Term Created "+ JSON.stringify(termResult));
+    });
+
+    });
+
+  });
+}
+processTrigger({ endPointURL: "https://asp.calibersoftware.com/capi2_APISandbox", apiKey: "MINER01", username: "asanchez", password: "xKuFyku2J3" });
